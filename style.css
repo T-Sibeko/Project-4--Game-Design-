@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(
+        circle at the top,#2d3250,#171927 60%,#0d0e17
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.game-container{
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(225, 225,225,0.06);
+    border: 1px solid rgba(255, 255,255, 0.12);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.game-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.game-header h1{
+    font-size: clamp(2rem,5vw,4rem);
+    line-height: 0.95;
+    letter-spacing: 3px;
+}
+
+.rock-icon,
+.scissors-icon{
+    font-size: 3rem;
+}
+
+.scoreboard{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.player h2 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.score{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.versus{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd166;
+}
+
+.hand{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.hand-section{
+    text-align: center;
+}
+
+.hand-section h3 {
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hand-container{
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.hand-container img {
+    max-width: 85%;
+    max-height: 190%;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hand-container img:hover{
+    transform: scale(1.05);
+}
+
+.result-section{
+    text-align: center;
+}
+
+.result-section h2 {
+    font-size: clamp(1.5rem,3vw,2.5rem);
+}
+
+.result-section p{
+    color: #b9bdca;
+    font-size: 1rem;
+}
+
+.choices{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.choices h2 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.choices-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.choice{
+    width: 150px;
+    min-height: 150px;
+    border: 2px solid rgba(255, 255, 2555, 0.08);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2 ease, backgound 0.2 ease, border 0.2 ease;
+}
+
+.choice img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.choice:hover{
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffd166;
+}
+
+.choice:active{
+    transform: scale(0.95);
+}
+
+reset-button{
+    display: block;
+    margin: 0 auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #171927;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.reset-button:hover{
+    transition: scale(1.05);
+}
+
+@media (max-width: 750px) {
+    body{
+        padding: 15px;
+    }
+
+    .game-container{
+        padding: 20px;
+    }
+
+    .scoreboard{
+        gap: 10px;
+    }
+
+    hand{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .result-section{
+        order: -1;
+    }
+
+    .hand-container{
+        height: 180px;
+    }
+
+    .hand-container img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width:500px){
+
+    .game-header{
+        gap: 10px;
+    }
+
+    .rock-icon,
+    .scissors-icon{
+        font-size: 2rem;
+    }
+
+    .choice{
+        width: 100px;
+        min-height: 120px;
+    }
+
+    .choice img{
+        width: 55px;
+        height: 55px;
+    }
+
+    .score{
+        font-size: 3rem;
+    }
+}
