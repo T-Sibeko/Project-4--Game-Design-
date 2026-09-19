@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+
+    <title>Let the games begin!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="game-container">
+        <header class="game-header">
+        <div class="rock-icon">✊🏾</div>
+        <h1>ROCK PAPER<br> SCISSORS</h1>
+        <div class="scissors-icon">✌🏾</div>
+        </header>
+
+        <section class="scoreboard">
+            <div class="player">
+                <h2>player</h2>
+                <div id="playerScore"
+                class="score">0</div>
+            </div>
+
+            <div class="versus">
+                ⚡ VS ⚡
+            </div>
+
+            <div class="player"
+            <h2>Computer</h2>
+
+            <div id="opponentScore" class="score">
+                0
+            </div>
+        </div>
+        </section>
+
+        <section class="hands">
+            <div class="hand-section">
+                <h3>YOU</h3>
+                <div class="hand-container">
+                    <img id="playerHand" src="images/rock.png" alt="Player hand">
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2 id="resultText">Make Your Move</h2>
+                <p id="reasonText">Choose Rock, Paper or Scissors</p>
+            </div>
+
+            <div class="hand-section">
+                <h3>Computer</h3>
+                <div class="hand-container">
+                    <img id="opponentHand" src="images/rock.png" alt="Computer hand">
+                </div>
+            </div>
+        </section>
+
+        <section class="choices">
+            <h2>Make Your Move</h2>
+            <div class="choice-buttons">
+                <button class="choice" id="rockButton" type="button">
+                <img src="images/rock.png" alt="Rock">
+                <span> Rock</span></button>
+
+                <button class="choice" id="paperButton" type="button">
+                    <img src="images/paper.png" alt="Paper">
+                    <span>Paper</span></button>
+
+                <button class="choice" id="scissorsButton" type="button">
+                    <img src="images/paper.png" alt="Scissors">
+                    <span>Scissors</span></button>
+        
+            </div>
+        </section>
+
+        <button id="resetButton" class="reset-button" type="button">Reset Game</button>
+    </main>
+
+    <audio id="clickSound" src="sounds/click.mp3"></audio>
+    <audio id="winSound" src="sound/win.mp3"></audio>
+    <audio id="loseSound" src="sound/lose.mp3"></audio>
+    <audio id="drawSound" src="sound/draw.mp3"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
