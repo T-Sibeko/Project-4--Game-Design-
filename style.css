@@ -210,6 +210,26 @@ body{
     transform: scale(1.05);
 }
 
+.creator{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.creator a {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.creator a:hover{
+    color: #ffffff;
+    text-shadow:blue;
+}
+
 @media (max-width: 751px) and
 (max-width:1100px) {
     body{
