@@ -90,12 +90,6 @@ body{
     text-align: center;
 }
 
-.hand-section h3 {
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    color: #171927;
-}
-
 .hand-container{
     height: 220px;
     display: flex;
