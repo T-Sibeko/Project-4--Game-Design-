@@ -248,8 +248,10 @@ body{
     }
 
     .scoreboard{
-        gap: 15px;
-        margin-bottom: 20px;
+        gap: 6px;
+        margin-bottom: 25px;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0,1fr);
     }
     .score{
         font-size: 3rem;
@@ -322,5 +324,27 @@ body{
 
     .score{
         font-size: 2.5rem;
+    }
+
+    .scoreboard{
+        gap: 4px;
+    }
+
+    .player{
+        min-height: 75px;
+        padding-bottom: 8px 3px;
+    }
+
+    .versus{
+        min-width: 45px;
+        font-size: 0.6rem;
+    }
+
+    .hand-container{
+        height: 140px;
+    }
+
+    .hand-container img{
+        max-height: 125px;
     }
 }
