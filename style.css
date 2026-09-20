@@ -54,7 +54,7 @@ body{
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
-    color: #171927;
+    color: black;
 }
 
 .player{
@@ -115,7 +115,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.04);
+    background: black;
     overflow: hidden;
 }
 
