@@ -212,23 +212,33 @@ body{
     transform: scale(1.05);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 751px) and
+(max-width:1100px) {
     body{
         padding: 15px;
     }
 
     .game-container{
+        max-width: 95%;
         padding: 20px;
+    }
+
+    .game-header h1{
+        font-size: 3rem;
     }
 
     .scoreboard{
         grid-template-columns: 1fr auto 1fr;
         gap: 8px;
+        margin-bottom: 30px;
+    }
+    .score{
+        font-size: 3rem;
     }
 
     .player{
         min-height: 100px;
-        padding: 15px 10px;
+        padding: 15px 20px;
     }
 
     .player h2{
@@ -237,13 +247,24 @@ body{
     }
 
     .versus{
-        min-height: 65px;
-        font-size: 0.85rem;
+        min-height: 80px;
+        font-size: 1.1rem;
     }
 
     .hands{
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
+        margin-bottom: 165px;
+    }
+
+    .choice{
+        width: 130px;
+        min-height: 130px;
+    }
+
+    .choice img{
+        width: 65px;
+        min-height: 65px;
     }
 
     .result-section{
@@ -255,7 +276,7 @@ body{
     }
 
     .hand-container img {
-        max-height: 180px;
+        max-height: 165px;
     }
 }
 
