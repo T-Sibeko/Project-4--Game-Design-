@@ -42,9 +42,10 @@ body{
     font-size: clamp(2rem,5vw,4rem);
     line-height: 0.95;
     letter-spacing: 3px;
+    color: black;
 }
 
-.rock-icon,
+.trophy-icon,
 .scissors-icon{
     font-size: 3rem;
 }
@@ -226,7 +227,7 @@ body{
         gap: 10px;
     }
 
-    .rock-icon,
+    .trophy-icon,
     .scissors-icon{
         font-size: 2rem;
     }
