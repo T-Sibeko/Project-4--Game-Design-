@@ -24,7 +24,7 @@ const opponentScoreDisplay = document.getElementById("opponentScore");
 
 const reasonText= document.getElementById("reasonText");
 
-const resultText= document.getElementById("reasultText");
+const resultText= document.getElementById("resultText");
 
 const rockButton= document.getElementById("rockButton");
 
@@ -115,6 +115,6 @@ resetButton.addEventListener("click", function() {
     playerHand.src = handImages.Rock;
     opponentHand.src = handImages.Rock;
 
-    resultText.textContent = "MAKE YOU MOVE";
-    reasonext.textContent = "Chose Rock, Paper or Scissors";
+    resultText.textContent = "What's Your Next Move?";
+    reasonText.textContent = "Choose Rock, Paper or Scissors";
 });
