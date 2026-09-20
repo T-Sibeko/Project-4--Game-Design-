@@ -112,8 +112,8 @@ resetButton.addEventListener("click", function() {
     playerScore = 0;
     opponentScore = 0;
     updateScore();
-    playerHand.src = handImages.Rock;
-    opponentHand.src = handImages.Rock;
+    playerHand.src = "start-image-1.png";
+    opponentHand.src = "start-image-2.png";
 
     resultText.textContent = "What's Your Next Move?";
     reasonText.textContent = "Choose Rock, Paper or Scissors";
