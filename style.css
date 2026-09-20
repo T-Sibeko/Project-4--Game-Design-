@@ -74,7 +74,7 @@ body{
     color: #ffd166;
 }
 
-.hand{
+.hands{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -103,7 +103,7 @@ body{
 
 .hand-container img {
     max-width: 85%;
-    max-height: 190%;
+    max-height: 190px;
     object-fit: contain;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -136,7 +136,7 @@ body{
     margin-bottom: 20px;
 }
 
-.choices-button{
+.choice-buttons{
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -146,14 +146,14 @@ body{
 .choice{
     width: 150px;
     min-height: 150px;
-    border: 2px solid rgba(255, 255, 2555, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.08);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    transition: transform 0.2 ease, backgound 0.2 ease, border 0.2 ease;
+    transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
 }
 
 .choice img {
@@ -172,7 +172,7 @@ body{
     transform: scale(0.95);
 }
 
-reset-button{
+.reset-button{
     display: block;
     margin: 0 auto;
     padding: 12px 25px;
@@ -186,7 +186,7 @@ reset-button{
 }
 
 .reset-button:hover{
-    transition: scale(1.05);
+    transform: scale(1.05);
 }
 
 @media (max-width: 750px) {
@@ -202,7 +202,7 @@ reset-button{
         gap: 10px;
     }
 
-    hand{
+    .hands{
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -216,7 +216,7 @@ reset-button{
     }
 
     .hand-container img {
-        max-height: 150px;
+        max-height: 180px;
     }
 }
 
