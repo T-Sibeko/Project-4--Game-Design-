@@ -223,22 +223,25 @@ body{
         padding: 20px;
     }
 
+    .game-header{
+        margin-bottom: 18px;
+    }
+
     .game-header h1{
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
 
     .scoreboard{
-        grid-template-columns: 1fr auto 1fr;
-        gap: 8px;
-        margin-bottom: 30px;
+        gap: 15px;
+        margin-bottom: 20px;
     }
     .score{
         font-size: 3rem;
     }
 
     .player{
-        min-height: 100px;
-        padding: 15px 20px;
+        min-height: 90px;
+        padding: 10px 18px;
     }
 
     .player h2{
@@ -247,8 +250,8 @@ body{
     }
 
     .versus{
-        min-height: 80px;
-        font-size: 1.1rem;
+        min-height: 75px;
+        font-size: 1rem;
     }
 
     .hands{
