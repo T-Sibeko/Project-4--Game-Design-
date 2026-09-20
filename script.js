@@ -5,22 +5,26 @@ const choices=[
 ];
 
 const handImages={
-    Rock:"images/rock.png",
-    Paper: "images/paper.png",
-    Scissors:"images/scissors.png"
+    Rock:"rock.png",
+    Paper: "paper.png",
+    Scissors:"scissors.png"
 };
 
 let playerScore= 0;
 
 let opponentScore= 0;
 
-const playerHand = document.ElementById("opponentHand");
+const playerHand = document.getElementById("playerHand");
+
+const opponentHand = document.getElementById("opponentHand");
 
 const playerScoreDisplay = document.getElementById("playerScore");
 
 const opponentScoreDisplay = document.getElementById("opponentScore");
 
 const reasonText= document.getElementById("reasonText");
+
+const resultText= document.getElementById("reasultText");
 
 const rockButton= document.getElementById("rockButton");
 
@@ -30,13 +34,13 @@ const scissorsButton= document.getElementById("scissorsButton");
 
 const resetButton= document.getElementById("resetButton");
 
-const clickButton= document.getElementById("clickButton");
+const clickSound= document.getElementById("clickSound");
 
-const winButton= document.getElementById("winButton");
+const winSound= document.getElementById("winSound");
 
-const loseButton= document.getElementById("loseButton");
+const loseSound= document.getElementById("loseSound");
 
-const drawButton= document.getElementById("drawButton");
+const drawSound= document.getElementById("drawSound");
 
 
 function playGame(playChoice) {
@@ -47,25 +51,25 @@ function playGame(playChoice) {
 
     if (playChoice===opponentChoice) {
         resultText.textContent = "DRAW!";
-        reasonText.textContent =`Both players chose ${playerChoice}.`;
+        reasonText.textContent =`Both players chose ${playChoice}.`;
         playSound(drawSound);    
     }
 
     else if (
-        (playChoice==="Rock" && opponentChoice===="Scissors") || (playChoice==="Paper" && opponentChoice ==="Rock") ||
-        (playChoice==="Scissor" && opponentChoice==="Paper"))
+        (playChoice==="Rock" && opponentChoice==="Scissors") || (playChoice==="Paper" && opponentChoice ==="Rock") ||
+        (playChoice==="Scissors" && opponentChoice==="Paper"))
 
         {
             playerScore++;
-            resultText.reasonText= "YOU WIN!";
-            reasonText.textContent= `${opponentChoice} beats ${opponentChoice}.`;
+            resultText.textContent= "YOU WIN!";
+            reasonText.textContent= `${playChoice} beats ${opponentChoice}.`;
             playSound(winSound);
         }
 
         else{
             opponentScore++;
-            reasonText.textContent="YOU LOSE!";
-            reasonText.textContent=`${opponentChoice} beats ${playerChoice}.`;
+            resultText.textContent="YOU LOSE!";
+            reasonText.textContent=`${opponentChoice} beats ${playChoice}.`;
             playSound(loseSound);
         }
 
@@ -87,7 +91,7 @@ function updateScore() {
 
 function playSound(sound){
     if(sound){
-        sound.currrentTime = 0;
+        sound.currentTime = 0;
         sound.play().catch(()=>{});
     }
 }
@@ -112,5 +116,5 @@ resetButton.addEventListener("click", function() {
     opponentHand.src = handImages.Rock;
 
     resultText.textContent = "MAKE YOU MOVE";
-    resultText.textContent = "Chose Rock, Paper or Sciccors";
+    reasonext.textContent = "Chose Rock, Paper or Scissors";
 });
